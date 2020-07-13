@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		DF578CB924BCB4D8009B09F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF578CB724BCB4D8009B09F9 /* Main.storyboard */; };
 		DF578CBB24BCB4DA009B09F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF578CBA24BCB4DA009B09F9 /* Assets.xcassets */; };
 		DF578CBE24BCB4DA009B09F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF578CBC24BCB4DA009B09F9 /* LaunchScreen.storyboard */; };
+		DF578CC724BCB69C009B09F9 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DF578CC624BCB69C009B09F9 /* CombineCocoa */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF578CC724BCB69C009B09F9 /* CombineCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = "Combine-UIKit";
+			packageProductDependencies = (
+				DF578CC624BCB69C009B09F9 /* CombineCocoa */,
+			);
 			productName = "Combine-UIKit";
 			productReference = DF578CAE24BCB4D8009B09F9 /* Combine-UIKit.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = DF578CA524BCB4D8009B09F9;
+			packageReferences = (
+				DF578CC524BCB69C009B09F9 /* XCRemoteSwiftPackageReference "CombineCocoa" */,
+			);
 			productRefGroup = DF578CAF24BCB4D8009B09F9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -291,7 +299,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.werockstar.Combine-UIKit";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.werockstar.combine-uikit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -309,7 +317,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.werockstar.Combine-UIKit";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.werockstar.combine-uikit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -338,6 +346,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DF578CC524BCB69C009B09F9 /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DF578CC624BCB69C009B09F9 /* CombineCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF578CC524BCB69C009B09F9 /* XCRemoteSwiftPackageReference "CombineCocoa" */;
+			productName = CombineCocoa;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DF578CA624BCB4D8009B09F9 /* Project object */;
 }
