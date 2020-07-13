@@ -10,13 +10,56 @@
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Combine_UIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FdQ-h9-Fmm">
+                                <rect key="frame" x="42" y="86" width="330" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VG3-vc-sH1">
+                                <rect key="frame" x="200" y="360" width="14" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DHK-ie-rLo">
+                                <rect key="frame" x="132" y="368" width="150" height="2"/>
+                            </progressView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RxE-A4-uJf">
+                                <rect key="frame" x="107" y="142" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RxE-A4-uJf" secondAttribute="height" multiplier="1:1" id="Va2-2Q-U5F"/>
+                                    <constraint firstAttribute="width" constant="200" id="iT5-zx-SUB"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VG3-vc-sH1" firstAttribute="width" secondItem="RxE-A4-uJf" secondAttribute="width" multiplier="0.07" id="5QO-QL-G4O"/>
+                            <constraint firstItem="FdQ-h9-Fmm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="AiW-xk-QLz"/>
+                            <constraint firstItem="RxE-A4-uJf" firstAttribute="top" secondItem="FdQ-h9-Fmm" secondAttribute="bottom" constant="22" id="Fla-b4-0ZS"/>
+                            <constraint firstItem="DHK-ie-rLo" firstAttribute="centerX" secondItem="VG3-vc-sH1" secondAttribute="centerX" id="ITs-tB-SAy"/>
+                            <constraint firstItem="FdQ-h9-Fmm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="Xr2-JK-4ec"/>
+                            <constraint firstItem="RxE-A4-uJf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="acp-Ow-Vcc"/>
+                            <constraint firstItem="VG3-vc-sH1" firstAttribute="centerX" secondItem="RxE-A4-uJf" secondAttribute="centerX" id="ad1-z5-xsa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FdQ-h9-Fmm" secondAttribute="trailing" constant="42" id="cfP-Mz-5ke"/>
+                            <constraint firstItem="DHK-ie-rLo" firstAttribute="top" secondItem="RxE-A4-uJf" secondAttribute="bottom" constant="26" id="e60-4u-942"/>
+                            <constraint firstAttribute="width" secondItem="RxE-A4-uJf" secondAttribute="width" multiplier="2.07" id="fJS-Rr-QJi"/>
+                            <constraint firstItem="DHK-ie-rLo" firstAttribute="width" secondItem="RxE-A4-uJf" secondAttribute="width" multiplier="0.75" id="gJL-2N-RCG"/>
+                            <constraint firstItem="VG3-vc-sH1" firstAttribute="top" secondItem="RxE-A4-uJf" secondAttribute="bottom" constant="18" id="s2i-AO-nUc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="avatarImageView" destination="RxE-A4-uJf" id="xxu-XC-QL9"/>
+                        <outlet property="progressView" destination="DHK-ie-rLo" id="Dk7-Tz-T5r"/>
+                        <outlet property="usernameLabel" destination="VG3-vc-sH1" id="2cF-ki-XIi"/>
+                        <outlet property="usernameTextField" destination="FdQ-h9-Fmm" id="90x-w9-CKE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
