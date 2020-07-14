@@ -35,14 +35,14 @@ class MainViewModel {
     func transform(input: Input) -> Output {
         let loading = CurrentValueSubject<Loading, Never>(.stopLoading)
         let githubResult = input.textFieldTextChange
-            .debounce(for: 0.3, scheduler: RunLoop.main)
+            .debounce(for: 0.3, scheduler: DispatchQueue.main)
             .filter { username in username?.count ?? 0 > 3 }
             .handleEvents(receiveOutput: { _ in
                 loading.send(.startLoading)
             })
-            .compactMap { $0 }
             .compactMap { username -> URL? in
-                URL(string: "https://api.github.com/users/\(username)")
+                guard let user = username else { return .none }
+                return URL(string: "https://api.github.com/users/\(user)")
             }
             .flatMap { url -> AnyPublisher<GithubResponse, Never> in
                 return URLSession.shared.dataTaskPublisher(for: url)
