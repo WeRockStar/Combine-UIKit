@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DF3C637C24BDEA07008EF296 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3C637B24BDEA07008EF296 /* MainViewModel.swift */; };
 		DF3C637E24BDF948008EF296 /* GithubResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3C637D24BDF948008EF296 /* GithubResponse.swift */; };
+		DF3C638124BE0BC5008EF296 /* EntwineTest in Frameworks */ = {isa = PBXBuildFile; productRef = DF3C638024BE0BC5008EF296 /* EntwineTest */; };
 		DF578CB224BCB4D8009B09F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF578CB124BCB4D8009B09F9 /* AppDelegate.swift */; };
 		DF578CB424BCB4D8009B09F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF578CB324BCB4D8009B09F9 /* SceneDelegate.swift */; };
 		DF578CB624BCB4D8009B09F9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF578CB524BCB4D8009B09F9 /* MainViewController.swift */; };
@@ -37,6 +38,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF578CC724BCB69C009B09F9 /* CombineCocoa in Frameworks */,
+				DF3C638124BE0BC5008EF296 /* EntwineTest in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +95,7 @@
 			name = "Combine-UIKit";
 			packageProductDependencies = (
 				DF578CC624BCB69C009B09F9 /* CombineCocoa */,
+				DF3C638024BE0BC5008EF296 /* EntwineTest */,
 			);
 			productName = "Combine-UIKit";
 			productReference = DF578CAE24BCB4D8009B09F9 /* Combine-UIKit.app */;
@@ -124,6 +127,7 @@
 			mainGroup = DF578CA524BCB4D8009B09F9;
 			packageReferences = (
 				DF578CC524BCB69C009B09F9 /* XCRemoteSwiftPackageReference "CombineCocoa" */,
+				DF3C637F24BE0BC5008EF296 /* XCRemoteSwiftPackageReference "Entwine" */,
 			);
 			productRefGroup = DF578CAF24BCB4D8009B09F9 /* Products */;
 			projectDirPath = "";
@@ -356,6 +360,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DF3C637F24BE0BC5008EF296 /* XCRemoteSwiftPackageReference "Entwine" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tcldr/Entwine";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
 		DF578CC524BCB69C009B09F9 /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa.git";
@@ -367,6 +379,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DF3C638024BE0BC5008EF296 /* EntwineTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF3C637F24BE0BC5008EF296 /* XCRemoteSwiftPackageReference "Entwine" */;
+			productName = EntwineTest;
+		};
 		DF578CC624BCB69C009B09F9 /* CombineCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DF578CC524BCB69C009B09F9 /* XCRemoteSwiftPackageReference "CombineCocoa" */;
