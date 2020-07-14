@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DF3C637C24BDEA07008EF296 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3C637B24BDEA07008EF296 /* MainViewModel.swift */; };
+		DF3C637E24BDF948008EF296 /* GithubResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3C637D24BDF948008EF296 /* GithubResponse.swift */; };
 		DF578CB224BCB4D8009B09F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF578CB124BCB4D8009B09F9 /* AppDelegate.swift */; };
 		DF578CB424BCB4D8009B09F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF578CB324BCB4D8009B09F9 /* SceneDelegate.swift */; };
 		DF578CB624BCB4D8009B09F9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF578CB524BCB4D8009B09F9 /* MainViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		DF3C637B24BDEA07008EF296 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		DF3C637D24BDF948008EF296 /* GithubResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubResponse.swift; sourceTree = "<group>"; };
 		DF578CAE24BCB4D8009B09F9 /* Combine-UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Combine-UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF578CB124BCB4D8009B09F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF578CB324BCB4D8009B09F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				DF578CBC24BCB4DA009B09F9 /* LaunchScreen.storyboard */,
 				DF578CBF24BCB4DA009B09F9 /* Info.plist */,
 				DF3C637B24BDEA07008EF296 /* MainViewModel.swift */,
+				DF3C637D24BDF948008EF296 /* GithubResponse.swift */,
 			);
 			path = "Combine-UIKit";
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			files = (
 				DF578CB624BCB4D8009B09F9 /* MainViewController.swift in Sources */,
 				DF578CB224BCB4D8009B09F9 /* AppDelegate.swift in Sources */,
+				DF3C637E24BDF948008EF296 /* GithubResponse.swift in Sources */,
 				DF578CB424BCB4D8009B09F9 /* SceneDelegate.swift in Sources */,
 				DF3C637C24BDEA07008EF296 /* MainViewModel.swift in Sources */,
 			);

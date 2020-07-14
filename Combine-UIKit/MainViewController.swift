@@ -7,17 +7,31 @@
 //
 
 import UIKit
+import CombineCocoa
+import Combine
 
 class MainViewController: UIViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var progressView: UIProgressView!
-
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     
+    private var cancellable = Set<AnyCancellable>()
+    private let viewModel = MainViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let input = MainViewModel.Input(textFieldTextChange: usernameTextField.textPublisher)
+        
+        let output = viewModel.transform(input: input)
+        output.github
+            .map(\.login)
+            .compactMap { $0 }
+            .receive(on: RunLoop.main)
+            .assign(to: \.text, on: usernameLabel)
+            .store(in: &cancellable)
         
     }
 
