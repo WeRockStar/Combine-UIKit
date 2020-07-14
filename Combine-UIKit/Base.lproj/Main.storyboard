@@ -34,11 +34,12 @@
                                 </constraints>
                             </imageView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="IL5-uO-Agh">
-                                <rect key="frame" x="188.5" y="364" width="37" height="37"/>
+                                <rect key="frame" x="188.5" y="223.5" width="37" height="37"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="IL5-uO-Agh" firstAttribute="centerX" secondItem="RxE-A4-uJf" secondAttribute="centerX" id="5II-RB-5Yc"/>
                             <constraint firstItem="FdQ-h9-Fmm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="AiW-xk-QLz"/>
                             <constraint firstItem="RxE-A4-uJf" firstAttribute="top" secondItem="FdQ-h9-Fmm" secondAttribute="bottom" constant="22" id="Fla-b4-0ZS"/>
                             <constraint firstItem="FdQ-h9-Fmm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="Xr2-JK-4ec"/>
@@ -47,8 +48,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FdQ-h9-Fmm" secondAttribute="trailing" constant="42" id="cfP-Mz-5ke"/>
                             <constraint firstAttribute="width" secondItem="RxE-A4-uJf" secondAttribute="width" multiplier="2.07" id="fJS-Rr-QJi"/>
                             <constraint firstItem="VG3-vc-sH1" firstAttribute="top" secondItem="RxE-A4-uJf" secondAttribute="bottom" constant="18" id="s2i-AO-nUc"/>
-                            <constraint firstItem="IL5-uO-Agh" firstAttribute="centerX" secondItem="RxE-A4-uJf" secondAttribute="centerX" id="t96-2I-y3v"/>
-                            <constraint firstItem="IL5-uO-Agh" firstAttribute="top" secondItem="RxE-A4-uJf" secondAttribute="bottom" constant="22" id="vid-Gx-h5Z"/>
+                            <constraint firstItem="IL5-uO-Agh" firstAttribute="centerY" secondItem="RxE-A4-uJf" secondAttribute="centerY" id="sOR-Lt-JG1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
