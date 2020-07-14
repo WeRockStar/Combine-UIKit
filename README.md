@@ -3,4 +3,6 @@ Implementing real work project with combine framework
 
 - Combine
 - CombineCocoa (UIKit)
-- MVVM
+- MVVM + Coordinator
+- Dependency Injection
+- Unit Test
