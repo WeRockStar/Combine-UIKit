@@ -51,7 +51,6 @@ class MainViewModel {
                         let decoder = JSONDecoder()
                         return try decoder.decode(GithubResponse.self, from: data)
                     }
-                    .subscribe(on: DispatchQueue.global(qos: .utility))
                     .catch { error in Empty() }
                     .eraseToAnyPublisher()
             }.handleEvents(receiveOutput: { _ in

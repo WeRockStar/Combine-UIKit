@@ -19,6 +19,7 @@ struct GithubFetcher: Fetcher {
             }.flatMap { url -> AnyPublisher<Data, Never> in
                 URLSession.shared.dataTaskPublisher(for: url)
                     .map(\.data)
+                    .subscribe(on: DispatchQueue.global(qos: .utility))
                     .assertNoFailure()
                     .eraseToAnyPublisher()
             }.eraseToAnyPublisher()
