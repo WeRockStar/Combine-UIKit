@@ -20,6 +20,11 @@ enum GithubError: Error {
 }
 
 class MainViewModel {
+    private let fetcher: Fetcher
+    
+    init(fetcher: Fetcher) {
+        self.fetcher = fetcher
+    }
     
     private var cancellable = Set<AnyCancellable>()
     
@@ -40,13 +45,8 @@ class MainViewModel {
             .handleEvents(receiveOutput: { _ in
                 loading.send(.startLoading)
             })
-            .compactMap { username -> URL? in
-                guard let user = username else { return .none }
-                return URL(string: "https://api.github.com/users/\(user)")
-            }
-            .flatMap { url -> AnyPublisher<GithubResponse, Never> in
-                return URLSession.shared.dataTaskPublisher(for: url)
-                    .map(\.data)
+            .flatMap { username -> AnyPublisher<GithubResponse, Never> in
+                return self.fetcher.get(username: username)
                     .tryMap { data in
                         let decoder = JSONDecoder()
                         return try decoder.decode(GithubResponse.self, from: data)

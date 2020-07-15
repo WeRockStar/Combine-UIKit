@@ -17,6 +17,8 @@
 		DF578CBB24BCB4DA009B09F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF578CBA24BCB4DA009B09F9 /* Assets.xcassets */; };
 		DF578CBE24BCB4DA009B09F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF578CBC24BCB4DA009B09F9 /* LaunchScreen.storyboard */; };
 		DF578CC724BCB69C009B09F9 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DF578CC624BCB69C009B09F9 /* CombineCocoa */; };
+		DF6A08C224BF45A90026834F /* GithubFether.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A08C124BF45A90026834F /* GithubFether.swift */; };
+		DF6A08C424BF45D00026834F /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A08C324BF45D00026834F /* Fetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		DF578CBA24BCB4DA009B09F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF578CBD24BCB4DA009B09F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF578CBF24BCB4DA009B09F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF6A08C124BF45A90026834F /* GithubFether.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubFether.swift; sourceTree = "<group>"; };
+		DF6A08C324BF45D00026834F /* Fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 				DF578CBF24BCB4DA009B09F9 /* Info.plist */,
 				DF3C637B24BDEA07008EF296 /* MainViewModel.swift */,
 				DF3C637D24BDF948008EF296 /* GithubResponse.swift */,
+				DF6A08C124BF45A90026834F /* GithubFether.swift */,
+				DF6A08C324BF45D00026834F /* Fetcher.swift */,
 			);
 			path = "Combine-UIKit";
 			sourceTree = "<group>";
@@ -156,10 +162,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF6A08C424BF45D00026834F /* Fetcher.swift in Sources */,
 				DF578CB624BCB4D8009B09F9 /* MainViewController.swift in Sources */,
 				DF578CB224BCB4D8009B09F9 /* AppDelegate.swift in Sources */,
 				DF3C637E24BDF948008EF296 /* GithubResponse.swift in Sources */,
 				DF578CB424BCB4D8009B09F9 /* SceneDelegate.swift in Sources */,
+				DF6A08C224BF45A90026834F /* GithubFether.swift in Sources */,
 				DF3C637C24BDEA07008EF296 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
