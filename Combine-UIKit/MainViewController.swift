@@ -11,17 +11,25 @@ import CombineCocoa
 import Combine
 
 class MainViewController: UIViewController {
-
+    
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     
     private var cancellable = Set<AnyCancellable>()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        bind()
+    }
+    
+}
+
+extension MainViewController {
+    
+    func bind() {
         let fetcher = GithubFetcher()
         let viewModel = MainViewModel(fetcher: fetcher)
         let input = MainViewModel.Input(textFieldTextChange: usernameTextField.textPublisher)
@@ -58,6 +66,5 @@ class MainViewController: UIViewController {
                 }
             }).store(in: &cancellable)
     }
-
 }
 
