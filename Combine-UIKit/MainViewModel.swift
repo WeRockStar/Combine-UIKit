@@ -47,15 +47,13 @@ class MainViewModel {
             })
             .flatMap { username -> AnyPublisher<GithubResponse, Never> in
                 return self.fetcher.get(username: username)
-                    .tryMap { data in
-                        let decoder = JSONDecoder()
-                        return try decoder.decode(GithubResponse.self, from: data)
-                    }
+                    .decode(type: GithubResponse.self, decoder: JSONDecoder())
                     .catch { error in Empty() }
                     .eraseToAnyPublisher()
             }.handleEvents(receiveOutput: { _ in
                 loading.send(.stopLoading)
-            }).eraseToAnyPublisher()
+            })
+            .eraseToAnyPublisher()
         
         
         return Output(github: githubResult, loading: loading.eraseToAnyPublisher())
