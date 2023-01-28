@@ -1,5 +1,5 @@
 # Combine-UIKit
-Implementing real work project with combine framework 
+Implementing real world project with combine framework 
 
 - [x] Combine
 - [x] CombineCocoa (UIKit)
